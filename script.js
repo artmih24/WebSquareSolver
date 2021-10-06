@@ -3,7 +3,7 @@ console.log("А кто это тут у нас F12 нажал?\nПривет в�
 function Validate(textboxID) {
     var str = document.getElementById(textboxID).value;
     str = str.replace(/[A-Za-zА-Яа-яЁё]/, '');
-    str = str.replace(/[+*\/\\\{\}\[\]\(\)_"'!@#$%^&?№:;~,|<>`]/, '');
+    str = str.replace(/[+*\/\\\{\}\[\]\(\) _"'!@#$%^&?№:;~,|<>`]/, '');
     if (str.split('.').length > 2)
         str = str.substring(0, str.length - 1);
     if (str.substring(0, 1) !== '-')
