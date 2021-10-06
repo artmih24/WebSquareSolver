@@ -52,8 +52,8 @@ function Solve() {
             }
         }
     } else if (discriminant == 0) {
-        var x = -coefB / (2 * coefA);
-        if (x != NaN) {
+        if (coefA != 0) {
+            var x = -coefB / (2 * coefA);
             resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
             resultStr += "x = " + x + "<br>";
         } else {
@@ -63,14 +63,25 @@ function Solve() {
     } else if (discriminant < 0) {
         var checkbox = document.getElementById("checkboxComplex");
         if (checkbox.checked) {
-            var x = -coefB / (2 * coefA);
-            var x1im = Math.sqrt(-discriminant) / (2 * coefA);
-            var x2im = -Math.sqrt(-discriminant) / (2 * coefA);
-            resultStr += "<br>Уравнение имеет два комплексных корня:<br>";
-            resultStr += "x<sub>1</sub> = " + x;
-            resultStr += ((x1im < 0) ? " - " : " + ") + Math.abs(x1im) + "i<br>";
-            resultStr += "x<sub>2</sub> = " + x;
-            resultStr += ((x2im < 0) ? " - " : " + ") + Math.abs(x2im) + "i<br>";
+            if (coefA != 0) {
+                var x = -coefB / (2 * coefA);
+                var x1im = Math.sqrt(-discriminant) / (2 * coefA);
+                var x2im = -Math.sqrt(-discriminant) / (2 * coefA);
+                resultStr += "<br>Уравнение имеет два комплексных корня:<br>";
+                resultStr += "x<sub>1</sub> = " + x;
+                resultStr += ((x1im < 0) ? " - " : " + ") + Math.abs(x1im) + "i<br>";
+                resultStr += "x<sub>2</sub> = " + x;
+                resultStr += ((x2im < 0) ? " - " : " + ") + Math.abs(x2im) + "i<br>";
+            } else {
+                if (coefB != 0) {
+                    var x = -coefC / coefB;
+                    resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
+                    resultStr += "x = " + x + "<br>";
+                } else {
+                    resultStr += "<br>Коэффициенты A и B равны 0<br>";
+                    resultStr += "Уравнение не имеет решений<br>";
+                }
+            }
         } else {
             resultStr += "<br>Уравнение не имеет вещественных корней<br>";
         }
