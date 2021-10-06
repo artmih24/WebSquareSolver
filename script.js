@@ -57,8 +57,13 @@ function Solve() {
             resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
             resultStr += "x = " + x + "<br>";
         } else {
-            resultStr += "<br>Все введенные коэффициенты равны 0<br>";
-            resultStr += "Уравнение не имеет решений<br>";
+            if (coefC != 0) {
+                resultStr += "<br>Коэффициенты A и B равны 0<br>";
+                resultStr += "Уравнение не имеет решений<br>";
+            } else {
+                resultStr += "<br>Все введенные коэффициенты равны 0<br>";
+                resultStr += "Уравнение не имеет решений<br>";
+            }
         }
     } else if (discriminant < 0) {
         var checkbox = document.getElementById("checkboxComplex");
