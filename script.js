@@ -35,15 +35,31 @@ function Solve() {
     resultStr += ((coefC < 0) ? " - " : " + ") + Math.abs(coefC) + " = 0<br>";
     var discriminant = coefB * coefB - 4 * coefA * coefC;
     if (discriminant > 0) {
-        var x1 = (-coefB + Math.sqrt(discriminant)) / (2 * coefA);
-        var x2 = (-coefB - Math.sqrt(discriminant)) / (2 * coefA);
-        resultStr += "<br>Уравнение имеет два вещественных корня:<br>";
-        resultStr += "x<sub>1</sub> = " + x1 + "<br>";
-        resultStr += "x<sub>2</sub> = " + x2 + "<br>";
+        if (coefA != 0) {
+            var x1 = (-coefB + Math.sqrt(discriminant)) / (2 * coefA);
+            var x2 = (-coefB - Math.sqrt(discriminant)) / (2 * coefA);
+            resultStr += "<br>Уравнение имеет два вещественных корня:<br>";
+            resultStr += "x<sub>1</sub> = " + x1 + "<br>";
+            resultStr += "x<sub>2</sub> = " + x2 + "<br>";
+        } else {
+            if (coefB != 0) {
+                var x = -coefC / coefB;
+                resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
+                resultStr += "x = " + x + "<br>";
+            } else {
+                resultStr += "<br>Коэффициенты A и B равны 0<br>";
+                resultStr += "Уравнение не имеет решений<br>";
+            }
+        }
     } else if (discriminant == 0) {
         var x = -coefB / (2 * coefA);
-        resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
-        resultStr += "x = " + x + "<br>";
+        if (x != NaN) {
+            resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
+            resultStr += "x = " + x + "<br>";
+        } else {
+            resultStr += "<br>Все введенные коэффициенты равны 0<br>";
+            resultStr += "Уравнение не имеет решений<br>";
+        }
     } else if (discriminant < 0) {
         var checkbox = document.getElementById("checkboxComplex");
         if (checkbox.checked) {
