@@ -72,9 +72,6 @@ button:hover {
     height: 15px;
 }
 
-
-/* для мобильного телефона, проверялось на Xiaomi Mi Note 10 Pro */
-
 @media screen and (max-width: 1080px) {
     #footer {
         font-family: Arial, Helvetica, sans-serif;
@@ -111,7 +108,7 @@ button:hover {
         font-size: 28px;
     }
     .textbox {
-        width: 12%;
+        width: 16%;
         height: var(--MyMobileFontSize);
         font-size: var(--MyMobileFontSize);
         text-align: right;
