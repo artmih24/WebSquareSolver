@@ -139,3 +139,12 @@ button:hover {
         text-align: right;
     }
 }
+
+@media only screen and (min-width: 393px) and (max-width: 767px) {
+    .textbox {
+        width: 20%;
+        height: var(--MyMobileFontSize);
+        font-size: var(--MyMobileFontSize);
+        text-align: right;
+    }
+}
