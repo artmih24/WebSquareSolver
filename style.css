@@ -133,3 +133,15 @@ button:hover {
         background: aquamarine;
     }
 }
+
+@media screen and (max-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+    .textbox {
+        width: 14%;
+        height: var(--MyMobileFontSize);
+        font-size: var(--MyMobileFontSize);
+        text-align: right;
+    }
+    #footer {
+        background: aquamarine;
+    }
+}
