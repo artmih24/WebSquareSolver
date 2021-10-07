@@ -62,7 +62,7 @@ function Solve() {
                 resultStr += "Уравнение не имеет решений<br>";
             } else {
                 resultStr += "<br>Все введенные коэффициенты равны 0<br>";
-                resultStr += "Уравнение не имеет решений<br>";
+                resultStr += "x - любое число<br>";
             }
         }
     } else if (discriminant < 0) {
