@@ -122,7 +122,7 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     .textbox {
         width: 14%;
         height: var(--MyMobileFontSize);
@@ -134,7 +134,7 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
     .textbox {
         width: 14%;
         height: var(--MyMobileFontSize);
