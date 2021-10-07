@@ -108,7 +108,7 @@ button:hover {
         font-size: 28px;
     }
     .textbox {
-        width: 16%;
+        width: 14%;
         height: var(--MyMobileFontSize);
         font-size: var(--MyMobileFontSize);
         text-align: right;
