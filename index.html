@@ -10,13 +10,13 @@
 <body>
     <div id="solver">
         <input type="text" class="textbox" id="textboxA" placeholder="0" oninput="Validate('textboxA')">
-        <text>x<sup>2</sup> +</text>
+        <text>x<sup>2</sup> + </text>
         <input type="text" class="textbox" id="textboxB" placeholder="0" oninput="Validate('textboxB')">
-        <text>x +</text>
+        <text>x + </text>
         <input type="text" class="textbox" id="textboxC" placeholder="0" oninput="Validate('textboxC')">
-        <text>= 0</text>
+        <text>&nbsp;= 0</text>
         <br>
-        <button onclick="Solve()"><text class="buttonText">Решить</text></button>
+        <button onclick="Solve()"><text class="buttonText" id="buttonText">Решить</text></button>
         <input type="checkbox" class="checkbox" id="checkboxComplex" onchange="Solve()">
         <label for="checkboxComplex">Отображать комплексные результаты</label>
     </div>
