@@ -1,5 +1,6 @@
 :root {
     --MyBlueColor: dodgerblue;
+    --MyTransition200: 200ms;
 }
 
 text {
@@ -26,6 +27,11 @@ text {
     vertical-align: middle;
     margin-bottom: 6px;
     margin-left: 24px;
+}
+
+.checkbox:hover+label {
+    color: var(--MyBlueColor);
+    transition: var(--MyTransition200);
 }
 
 label {
