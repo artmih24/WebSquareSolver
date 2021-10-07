@@ -107,7 +107,7 @@ button:hover {
         font-size: 28px;
     }
     .textbox {
-        width: 14%;
+        width: 20%;
         height: var(--MyMobileFontSize);
         font-size: var(--MyMobileFontSize);
         text-align: right;
@@ -129,9 +129,6 @@ button:hover {
         font-size: var(--MyMobileFontSize);
         text-align: right;
     }
-    #footer {
-        background: aquamarine;
-    }
 }
 
 @media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -140,8 +137,5 @@ button:hover {
         height: var(--MyMobileFontSize);
         font-size: var(--MyMobileFontSize);
         text-align: right;
-    }
-    #footer {
-        background: aquamarine;
     }
 }
