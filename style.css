@@ -86,7 +86,7 @@ button:hover {
         background: var(--MyBlueColor);
         color: white;
         width: 100%;
-        height: calc(var(--MyMobileFontSize) + 6px);
+        height: calc(var(--MyMobileFontSize) / 2 + 4px);
     }
     text {
         font-family: Arial, Helvetica, sans-serif;
@@ -96,7 +96,7 @@ button:hover {
         font-size: var(--MyMobileFontSize);
     }
     #bottomText {
-        font-size: var(--MyMobileFontSize);
+        font-size: calc(var(--MyMobileFontSize) / 2);
     }
     .checkbox {
         vertical-align: middle;
