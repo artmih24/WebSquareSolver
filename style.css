@@ -2,7 +2,7 @@
     --MyBlueColor: dodgerblue;
     --MyTransition200: 200ms;
     --MyDefaultFontSize: 20px;
-    --MyMobileFontSize: 40px;
+    --MyMobileFontSize: 60px;
 }
 
 text {
@@ -110,7 +110,7 @@ button:hover {
         font-size: 32px;
     }
     .textbox {
-        width: 24%;
+        width: 20%;
         height: var(--MyMobileFontSize);
         font-size: var(--MyMobileFontSize);
         text-align: right;
