@@ -91,5 +91,5 @@ function Solve() {
             resultStr += "<br>Уравнение не имеет вещественных корней<br>";
         }
     }
-    div.innerHTML = "<text>" + resultStr + "</text>";
+    div.innerHTML = "<text>" + resultStr + "</text><br><br>";
 }
