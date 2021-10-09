@@ -24,72 +24,74 @@ function Solve() {
     var textboxA = document.getElementById("textboxA");
     var textboxB = document.getElementById("textboxB");
     var textboxC = document.getElementById("textboxC");
-    var div = document.getElementById("results");
-    var resultStr;
-    var coefA = GetValue(textboxA);
-    var coefB = GetValue(textboxB);
-    var coefC = GetValue(textboxC);
-    resultStr = "<br>Введено квадратное уравнение:<br>";
-    resultStr += coefA + "x<sup>2</sup>";
-    resultStr += ((coefB < 0) ? " - " : " + ") + Math.abs(coefB) + "x";
-    resultStr += ((coefC < 0) ? " - " : " + ") + Math.abs(coefC) + " = 0<br>";
-    var discriminant = coefB * coefB - 4 * coefA * coefC;
+    var resultDiv = document.getElementById("results");
+    var resultHTML;
+    var coefficientA = GetValue(textboxA);
+    var coefficientB = GetValue(textboxB);
+    var coefficientC = GetValue(textboxC);
+    resultHTML = "<br>Введено квадратное уравнение:<br>";
+    resultHTML += coefficientA + "x<sup>2</sup>";
+    resultHTML += ((coefficientB < 0) ? " - " : " + ") + Math.abs(coefficientB) + "x";
+    resultHTML += ((coefficientC < 0) ? " - " : " + ") + Math.abs(coefficientC) + " = 0<br>";
+    var discriminant = coefficientB * coefficientB - 4 * coefficientA * coefficientC;
     if (discriminant > 0) {
-        if (coefA != 0) {
-            var x1 = (-coefB + Math.sqrt(discriminant)) / (2 * coefA);
-            var x2 = (-coefB - Math.sqrt(discriminant)) / (2 * coefA);
-            resultStr += "<br>Уравнение имеет два вещественных корня:<br>";
-            resultStr += "x<sub>1</sub> = " + x1 + "<br>";
-            resultStr += "x<sub>2</sub> = " + x2 + "<br>";
+        if (coefficientA != 0) {
+            var x1 = (-coefficientB + Math.sqrt(discriminant)) / (2 * coefficientA);
+            var x2 = (-coefficientB - Math.sqrt(discriminant)) / (2 * coefficientA);
+            resultHTML += "<br>Уравнение имеет два вещественных корня:<br>";
+            resultHTML += "x<sub>1</sub> = " + x1 + "<br>";
+            resultHTML += "x<sub>2</sub> = " + x2 + "<br>";
         } else {
-            if (coefB != 0) {
-                var x = -coefC / coefB;
-                resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
-                resultStr += "x = " + x + "<br>";
+            if (coefficientB != 0) {
+                var x = -coefficientC / coefficientB;
+                resultHTML += "<br>Уравнение имеет один вещественный корень:<br>";
+                resultHTML += "x = " + x + "<br>";
             } else {
-                resultStr += "<br>Коэффициенты A и B равны 0<br>";
-                resultStr += "Уравнение не имеет решений<br>";
+                resultHTML += "<br>Коэффициенты A и B равны 0<br>";
+                resultHTML += "Уравнение не имеет решений<br>";
             }
         }
     } else if (discriminant == 0) {
-        if (coefA != 0) {
-            var x = -coefB / (2 * coefA);
-            resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
-            resultStr += "x = " + x + "<br>";
+        if (coefficientA != 0) {
+            var x = -coefficientB / (2 * coefficientA);
+            resultHTML += "<br>Уравнение имеет один вещественный корень:<br>";
+            resultHTML += "x = " + x + "<br>";
         } else {
-            if (coefC != 0) {
-                resultStr += "<br>Коэффициенты A и B равны 0<br>";
-                resultStr += "Уравнение не имеет решений<br>";
+            if (coefficientC != 0) {
+                resultHTML += "<br>Коэффициенты A и B равны 0<br>";
+                resultHTML += "Уравнение не имеет решений<br>";
             } else {
-                resultStr += "<br>Все введенные коэффициенты равны 0<br>";
-                resultStr += "x - любое число<br>";
+                resultHTML += "<br>Все введенные коэффициенты равны 0<br>";
+                resultHTML += "x - любое число<br>";
             }
         }
     } else if (discriminant < 0) {
         var checkbox = document.getElementById("checkboxComplex");
         if (checkbox.checked) {
-            if (coefA != 0) {
-                var x = -coefB / (2 * coefA);
-                var x1im = Math.sqrt(-discriminant) / (2 * coefA);
-                var x2im = -Math.sqrt(-discriminant) / (2 * coefA);
-                resultStr += "<br>Уравнение имеет два комплексных корня:<br>";
-                resultStr += "x<sub>1</sub> = " + x;
-                resultStr += ((x1im < 0) ? " - " : " + ") + Math.abs(x1im) + "i<br>";
-                resultStr += "x<sub>2</sub> = " + x;
-                resultStr += ((x2im < 0) ? " - " : " + ") + Math.abs(x2im) + "i<br>";
+            if (coefficientA != 0) {
+                var x = -coefficientB / (2 * coefficientA);
+                var x1im = Math.sqrt(-discriminant) / (2 * coefficientA);
+                var x2im = -Math.sqrt(-discriminant) / (2 * coefficientA);
+                resultHTML += "<br>Уравнение имеет два комплексных корня:<br>";
+                resultHTML += "x<sub>1</sub> = " + ((x != 0) ? x : "");
+                resultHTML += ((x1im < 0) ? ((x != 0) ? " - " : "-") : ((x != 0) ? " + " : ""));
+                resultHTML += Math.abs(x1im) + "i<br>";
+                resultHTML += "x<sub>2</sub> = " + ((x != 0) ? x : "");
+                resultHTML += ((x2im < 0) ? ((x != 0) ? " - " : "-") : ((x != 0) ? " + " : ""));
+                resultHTML += Math.abs(x2im) + "i<br>";
             } else {
-                if (coefB != 0) {
-                    var x = -coefC / coefB;
-                    resultStr += "<br>Уравнение имеет один вещественный корень:<br>";
-                    resultStr += "x = " + x + "<br>";
+                if (coefficientB != 0) {
+                    var x = -coefficientC / coefficientB;
+                    resultHTML += "<br>Уравнение имеет один вещественный корень:<br>";
+                    resultHTML += "x = " + x + "<br>";
                 } else {
-                    resultStr += "<br>Коэффициенты A и B равны 0<br>";
-                    resultStr += "Уравнение не имеет решений<br>";
+                    resultHTML += "<br>Коэффициенты A и B равны 0<br>";
+                    resultHTML += "Уравнение не имеет решений<br>";
                 }
             }
         } else {
-            resultStr += "<br>Уравнение не имеет вещественных корней<br>";
+            resultHTML += "<br>Уравнение не имеет вещественных корней<br>";
         }
     }
-    div.innerHTML = "<text>" + resultStr + "</text><br><br>";
+    resultDiv.innerHTML = "<text>" + resultHTML + "</text><br><br>";
 }
