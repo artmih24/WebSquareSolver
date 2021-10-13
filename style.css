@@ -2,6 +2,7 @@
     --MyBlueColor: dodgerblue;
     --MyGrayColor: lightslategray;
     --MyGreenColor: rgb(0, 60, 0);
+    --MyLineColor: #e8e7e7;
     --MyTransition200: 200ms;
     --MyDefaultFontSize: 20px;
     --MyMobileFontSize: 60px;
@@ -9,9 +10,9 @@
 
 body {
     background-color: var(--MyGreenColor);
-    background-image: linear-gradient(#e8e7e7 1px, transparent 0px), linear-gradient(90deg, #e8e7e7 1px, transparent 0px);
+    background-image: linear-gradient(var(--MyLineColor) 1px, transparent 0px), linear-gradient(90deg, var(--MyLineColor) 1px, transparent 0px);
     background-size: 22px 22px, 22px 22px;
-    background-position: 0 0, -1px -1px, -1px 1px;
+    background-position: -1px -1px, -1px 1px;
 }
 
 text {
@@ -87,9 +88,9 @@ button:hover {
 @media screen and (max-width: 1080px) {
     body {
         background-color: var(--MyGreenColor);
-        background-image: linear-gradient(#e8e7e7 2px, transparent 0px), linear-gradient(90deg, #e8e7e7 2px, transparent 0px);
+        background-image: linear-gradient(var(--MyLineColor) 2px, transparent 0px), linear-gradient(90deg, var(--MyLineColor) 2px, transparent 0px);
         background-size: 40px 40px, 40px 40px;
-        background-position: 0 0, -1px -1px, -1px 1px;
+        background-position: -1px -1px, -1px 1px;
     }
     #footer {
         font-family: Arial, Helvetica, sans-serif;
