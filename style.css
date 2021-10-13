@@ -1,7 +1,7 @@
 :root {
     --MyBlueColor: dodgerblue;
     --MyGrayColor: lightslategray;
-    --MyGreenColor: darkgreen;
+    --MyGreenColor: rgb(0, 60, 0);
     --MyTransition200: 200ms;
     --MyDefaultFontSize: 20px;
     --MyMobileFontSize: 60px;
@@ -33,18 +33,7 @@ text {
     height: var(--MyDefaultFontSize);
     font-size: var(--MyDefaultFontSize);
     text-align: right;
-    /* background-color: var(--MyGreenColor);
-    color: white;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #e8e7e7;
-    border-radius: 4px; */
 }
-
-
-/* ::placeholder {
-    color: #AAAAAA;
-} */
 
 .checkbox {
     vertical-align: middle;
@@ -140,15 +129,7 @@ button:hover {
         height: var(--MyMobileFontSize);
         font-size: var(--MyMobileFontSize);
         text-align: right;
-        /* background-color: var(--MyGreenColor);
-        color: white;
-        border-width: 2px;
-        border-style: solid;
-        border-color: #e8e7e7; */
     }
-    /* ::placeholder {
-        color: #AAAAAA;
-    } */
     button {
         margin-top: 20px;
         border-width: 1px;
