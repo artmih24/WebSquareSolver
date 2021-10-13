@@ -141,10 +141,9 @@ button:hover {
         text-align: right;
         background-color: var(--MyGreenColor);
         color: white;
-        border-width: 1px;
+        border-width: 2px;
         border-style: solid;
         border-color: #e8e7e7;
-        border-radius: 4px;
     }
      ::placeholder {
         color: #AAAAAA;
