@@ -6,6 +6,7 @@
     --MyTransition200: 200ms;
     --MyDefaultFontSize: 20px;
     --MyMobileFontSize: 60px;
+    --MyFontFamily: 'Comic Sans MS', 'Comic Sans', sans-serif;
 }
 
 body {
@@ -15,15 +16,17 @@ body {
     background-position: -1px -1px, -1px 1px;
 }
 
-@font-face {
+
+/* @font-face {
     font-family: "Comic Sans MS";
     src: url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.eot");
     src: local("comic.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.woff") format("woff"), url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.svg#Comic Sans MS") format("svg");
-}
+} */
 
 text {
     /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: Comic Sans MS, Comic Sans, Arial;
+    /* font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', Arial; */
+    font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
     font-size: var(--MyDefaultFontSize);
     color: white;
 }
