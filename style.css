@@ -16,7 +16,8 @@ body {
 }
 
 text {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Comic Sans MS, Comic Sans, cursive;
     font-size: var(--MyDefaultFontSize);
     color: white;
 }
@@ -26,10 +27,12 @@ text {
 }
 
 #bottomText {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
 
 .textbox {
+    font-family: Comic Sans MS, Comic Sans, cursive;
     width: 80px;
     height: var(--MyDefaultFontSize);
     font-size: var(--MyDefaultFontSize);
@@ -43,7 +46,8 @@ text {
 }
 
 label {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Comic Sans MS, Comic Sans, cursive;
     font-size: 12px;
     color: white;
 }
@@ -112,6 +116,7 @@ button:hover {
         font-size: var(--MyMobileFontSize);
     }
     #bottomText {
+        font-family: Arial, Helvetica, sans-serif;
         font-size: calc(var(--MyMobileFontSize) / 2);
     }
     .checkbox {
@@ -122,10 +127,12 @@ button:hover {
         transform: scale(3);
     }
     label {
-        font-family: Arial, Helvetica, sans-serif;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: Comic Sans MS, Comic Sans, cursive;
         font-size: 28px;
     }
     .textbox {
+        font-family: Comic Sans MS, Comic Sans, cursive;
         width: 20%;
         height: var(--MyMobileFontSize);
         font-size: var(--MyMobileFontSize);
